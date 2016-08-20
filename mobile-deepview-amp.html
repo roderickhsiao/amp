@@ -13,10 +13,12 @@
 		}
 		/* ============ Portrait ============ */
 		.main-image {
-			position: relative;
 			width: 100%;
 			height: 250px;
 			height: 75vw;
+			background-image: url(https://www.colehaan.com/dw/image/v2/AALO_PRD/on/demandware.static/-/Sites-itemmaster_colehaan/default/dwef4cecdd/images/large/F10534_A.jpg?sw=350);
+			background-size: cover;
+			background-position:top center;
 		}
 		#content-container {
 			box-sizing:border-box;
@@ -85,8 +87,14 @@
 			text-align: center;
 		}
 		.app-icon {
+			content:" ";
 			float:left;
 			display:inline-block;
+			width:62px;
+			height: 62px;
+			line-height: 62px;
+			background-size:100% auto;
+			background-image: url(http://a3.mzstatic.com/us/r30/Purple20/v4/ef/22/b5/ef22b5c1-8c4d-2520-7959-8ba5d6cbfe06/icon175x175.jpeg);
 		}
 		.cta-button {
 			display:block;
@@ -228,23 +236,12 @@
 		.cta-button--no-app-icon {
 			margin-left:0;
 		}
-		amp-img {
-			width: auto;
-			height: auto;
-		}
 	</style>
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
 	<div class="card center">
-		<div class="main-image">
-			<amp-img
-				src="https://www.colehaan.com/dw/image/v2/AALO_PRD/on/demandware.static/-/Sites-itemmaster_colehaan/default/dwef4cecdd/images/large/F10534_A.jpg?sw=350"
-				layout="responsive"
-			>
-			</amp-img>
-		</div>
-
+		<div class="main-image"></div>
 		<div id="content-container">
 			<div class="app-title text-bold">Cole Haan</div>
 			<div class="card-title text-light">Buchannon Attache
