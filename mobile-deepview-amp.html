@@ -236,8 +236,12 @@
 		.cta-button--no-app-icon {
 			margin-left:0;
 		}
+		.amp-sticky-ad-close-button {
+      display: none;
+    }
 	</style>
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
+	<script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-0.1.js"></script>
 </head>
 <body>
 	<div class="card center">
@@ -254,7 +258,7 @@
 </div>
 			<div class="app-content text-light">Our dapper Buchannon Attache is perfect for the downtown businessman with state-of-the-art tastes. Supple, fine grain leather with hand-burnished contrast leather trim and prominent strap detailing with polished brass hardware make your workweek that much classier. An adjustable strap allows for hands-free ease and a 15 inch laptop can be stored in its own interior compartment. Important documents, magazines and newspapers can be packed up and zipped in seamlessly.</div>
 		</div>
-		<div class="input-wrapper">
+		<amp-sticky-ad class="input-wrapper">
 			<div class="input-container">
 				<div class="input-label text-light">See this content immediately after install</div>
 				<form class="form-get-the-app">
@@ -268,7 +272,7 @@
 					<a href="{{action}}" class="cta-button text-light">Get The App</a>
 				</form>
 			</div>
-		</div>
+		</amp-sticky-ad>
 	</div>
 </body>
 </html>
