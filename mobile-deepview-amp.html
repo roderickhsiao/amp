@@ -16,15 +16,13 @@
 			width: 100%;
 			height: 250px;
 			height: 75vw;
-			background-image: url(https://www.colehaan.com/dw/image/v2/AALO_PRD/on/demandware.static/-/Sites-itemmaster_colehaan/default/dwef4cecdd/images/large/F10534_A.jpg?sw=350);
-			background-size: cover;
-			background-position: center;
+			display: flex;
 		}
 		#content-container {
 			box-sizing:border-box;
 			padding: 24px;
 			margin:0 24px 0 24px;
-			background-color: #ffffff;
+			background-color: #fff;
 		}
 		.app-title {
 			font-size: 14px;
@@ -68,7 +66,7 @@
 			margin-right: 10px;
 			padding-top: 10px;
 			padding-bottom: 10px;
-			background-color: #FFFFFF;
+			background-color: #fff;
 			border: 1px solid #979797;
 			border-radius: 2px;
 			font-size: 60px;
@@ -100,12 +98,12 @@
 			display:block;
 			height: 62px;
 			line-height:62px;
-			background-color: #444444;
+			background-color: #444;
 			border-radius: 2px;
 			font-size: 20px;
 			padding:0 20px;
 			margin-left:70px;
-			color: #FFFFFF;
+			color: #fff;
 			text-align: center;
 			text-decoration: none;
 		}
@@ -162,6 +160,12 @@
 				height:100%;
 				height:100vh;
 				width: 50%;
+				background-image: url(https://www.colehaan.com/dw/image/v2/AALO_PRD/on/demandware.static/-/Sites-itemmaster_colehaan/default/dwef4cecdd/images/large/F10534_A.jpg?sw=350);
+				background-size: cover;
+				background-position: center;
+			}
+			.main-image amp-img {
+				display: none;
 			}
 			.input-wrapper {
 				right:0;
@@ -236,26 +240,23 @@
 		.cta-button--no-app-icon {
 			margin-left:0;
 		}
-		.amp-sticky-ad-close-button {
-      display: none;
-    }
 	</style>
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
-	<script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-0.1.js"></script>
 </head>
 <body>
 	<div class="card center">
-		<amp-img
-			src="https://www.colehaan.com/dw/image/v2/AALO_PRD/on/demandware.static/-/Sites-itemmaster_colehaan/default/dwef4cecdd/images/large/F10534_A.jpg?sw=350"
-			width="350"
-			height="394"
-			layout="responsive"
+		<div class="main-image">
+			<amp-img
+				src="https://www.colehaan.com/dw/image/v2/AALO_PRD/on/demandware.static/-/Sites-itemmaster_colehaan/default/dwef4cecdd/images/large/F10534_A.jpg?sw=350"
+				width="350"
+				layout="flex-item"
 			>
-		</amp-img>
+			</amp-img>
+		</div>
 		<div id="content-container">
 			<div class="app-title text-bold">Cole Haan</div>
 			<div class="card-title text-light">Buchannon Attache
-</div>
+		</div>
 			<div class="app-content text-light">Our dapper Buchannon Attache is perfect for the downtown businessman with state-of-the-art tastes. Supple, fine grain leather with hand-burnished contrast leather trim and prominent strap detailing with polished brass hardware make your workweek that much classier. An adjustable strap allows for hands-free ease and a 15 inch laptop can be stored in its own interior compartment. Important documents, magazines and newspapers can be packed up and zipped in seamlessly.</div>
 		</div>
 		<div class="input-wrapper">
