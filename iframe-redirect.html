@@ -2,9 +2,20 @@
 <html lang="en">
   <head>
     <script type="text/javascript">
-      window.onload = function() {
-        window.location = 'https://branch.io';
-        // document.getElementById("l").src = 'https://branch.io';
+      window.addEventListener('message', function listenerCallback(event) {
+        var listener = function listener(event) {
+          if (event.source !== window.parent ||
+              event.origin !== window.context.location.origin ||
+              event.data.sentinel !== 'amp') {
+            return;
+          }
+          window.location = 'https://branch.io';
+      });
+
+      window.onload = function windowOnload() {
+        window.parent.postMessage({
+          sentinel: 'amp'
+        }, '*');
       };
     </script>
     <style>
