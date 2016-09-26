@@ -3,6 +3,7 @@
   <head>
     <script type="text/javascript">
       window.addEventListener('message', function listenerCallback(event) {
+        console.log('message', event);
         var listener = function listener(event) {
           if (event.source !== window.parent ||
               event.origin !== window.context.location.origin ||
@@ -10,6 +11,7 @@
             return;
           }
           window.location = 'https://branch.io';
+        });
       });
 
       window.onload = function windowOnload() {
