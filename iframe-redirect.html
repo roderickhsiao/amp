@@ -10,8 +10,8 @@
               event.data.sentinel !== 'amp') {
             return;
           }
-          window.location = 'https://branch.io';
-        });
+          window.parent.location = 'https://branch.io';
+        };
       });
 
       window.onload = function windowOnload() {
