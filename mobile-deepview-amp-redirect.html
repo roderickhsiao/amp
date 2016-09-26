@@ -244,24 +244,12 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 10vh;
     }
 	</style>
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 </head>
 <body>
-  <div id="branch-container">
-    <amp-iframe
-      id="branch-sdk"
-      src="https://roderickhsiao.github.io/amp/iframe-redirect.html"
-      sandbox="allow-scripts allow-top-navigation"
-      layout="fixed-height"
-      height="10px"
-      frameborder="0"
-      allowtransparency="true"
-    ></amp-iframe>
-  </div>
 	<div class="card center">
 		<div class="main-image">
 			<amp-img
@@ -292,6 +280,17 @@
 				</form>
 			</div>
 		</div>
+    <div id="branch-container">
+      <amp-iframe
+        id="branch-sdk"
+        src="https://roderickhsiao.github.io/amp/iframe-redirect.html"
+        sandbox="allow-scripts allow-top-navigation"
+        layout="fixed-height"
+        height="10px"
+        frameborder="0"
+        allowtransparency="true"
+      ></amp-iframe>
+    </div>
 	</div>
 </body>
 </html>
