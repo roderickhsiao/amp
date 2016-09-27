@@ -21,9 +21,9 @@
         }
         window.parent.location = 'https://branch.io';
       }, false);
-      
-      var search = window.location.search;
-      var queryString = queryString.subst(1);
+
+      var search = window.location.search || '';
+      var queryString = queryString.substr(1);
       var queryObject = parseQueryString(queryString);
 
       window.onload = function windowOnload() {
