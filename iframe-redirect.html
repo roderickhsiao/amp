@@ -23,7 +23,7 @@
       }, false);
 
       var search = window.location.search || '';
-      var queryString = queryString.substr(1);
+      var queryString = search.substr(1);
       var queryObject = parseQueryString(queryString);
 
       window.onload = function windowOnload() {
