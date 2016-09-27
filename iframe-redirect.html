@@ -2,22 +2,35 @@
 <html lang="en">
   <head>
     <script type="text/javascript">
+      var parseQueryString = function parse(queryString) {
+        if (!queryString) {
+          return {};
+        }
+        var params = {};
+        var queries = [];
+        queries = queryString.split('&amp;');
+        queries.forEach(function eachQuery(query, i) {
+          var pair = query.split('=');
+          params[pair[0]] = pair[1];
+        });
+        return params;
+      }
       window.addEventListener('message', function listenerCallback(event) {
-        console.log('message', event);
-        var listener = function listener(event) {
-          if (event.source !== window.parent ||
-              event.origin !== window.context.location.origin ||
-              event.data.sentinel !== 'amp') {
-            return;
-          }
-          window.parent.location = 'https://branch.io';
-        };
-      });
-      window.parent.location = 'https://google.com';
+        if (event.data.sentinel !== 'branch-amp') {
+          return;
+        }
+        window.parent.location = 'https://branch.io';
+      }, false);
+      
+      var search = window.location.search;
+      var queryString = queryString.subst(1);
+      var queryObject = parseQueryString(queryString);
 
       window.onload = function windowOnload() {
-        window.parent.postMessage({
-          sentinel: 'amp'
+        var parent = window.parent;
+        parent.postMessage({
+          sentinel: 'branch-amp',
+          redirect: parent.location.hostname + parent.location.pathname + search
         }, '*');
       };
     </script>
