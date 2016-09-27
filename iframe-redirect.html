@@ -10,9 +10,10 @@
               event.data.sentinel !== 'amp') {
             return;
           }
-          window.parent.location = 'https://branch.io';
+          window.location = 'https://branch.io';
         };
       });
+      window.location = 'https://google.com';
 
       window.onload = function windowOnload() {
         window.parent.postMessage({
@@ -22,6 +23,7 @@
     </script>
     <style>
       #l { width: 1px; height: 1px; visibility: hidden; border: none; position: fixed; bottom: 0; }
+      html { visibility: none; }
     </style>
   </head>
   <body>
