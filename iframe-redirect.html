@@ -15,24 +15,12 @@
         });
         return params;
       }
-      window.addEventListener('message', function listenerCallback(event) {
-        if (event.data.sentinel !== 'branch-amp') {
-          return;
-        }
-        window.parent.location = 'https://branch.io';
-      }, false);
 
       var search = window.location.search || '';
       var queryString = search.substr(1);
       var queryObject = parseQueryString(queryString);
 
-      window.onload = function windowOnload() {
-        var parent = window.parent;
-        parent.postMessage({
-          sentinel: 'branch-amp',
-          redirect: parent.location.hostname + parent.location.pathname + search
-        }, '*');
-      };
+      window.parent.location = queryObject['branch-redirect'];
     </script>
     <style>
       #l { width: 1px; height: 1px; visibility: hidden; border: none; position: fixed; bottom: 0; }
