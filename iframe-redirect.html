@@ -22,7 +22,7 @@
 
       var scheme_redirect = queryObject.scheme_redirect;
       if (scheme_redirect) {
-        window.parent.location = scheme_redirect;
+        window.parent.location = decodeURIComponent(scheme_redirect);
       }
     </script>
   </head>
