@@ -21,7 +21,9 @@
       var queryObject = parseQueryString(queryString);
 
       var scheme_redirect = queryObject.scheme_redirect;
-      window.parent.location = scheme_redirect;
+      if (scheme_redirect) {
+        window.parent.location = scheme_redirect;
+      }
     </script>
   </head>
   <body>
