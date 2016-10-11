@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <!-- TEMPLATE FOR REDIRECT -->
   <head>
     <script type="text/javascript">
       var parseQueryString = function parse(queryString) {
@@ -15,19 +16,14 @@
         });
         return params;
       }
-
       var search = window.location.search || '';
       var queryString = search.substr(1);
       var queryObject = parseQueryString(queryString);
 
-      window.parent.location = queryObject['branch-redirect'];
+      var scheme_redirect = queryObject.scheme_redirect;
+      window.parent.location = scheme_redirect;
     </script>
-    <style>
-      #l { width: 1px; height: 1px; visibility: hidden; border: none; position: fixed; bottom: 0; }
-      html { visibility: none; }
-    </style>
   </head>
   <body>
-    <iframe id="l"/>
   </body>
 </html>
