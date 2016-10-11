@@ -22,19 +22,8 @@
 
       var scheme_redirect = decodeURIComponent(queryObject.scheme_redirect);
       if (scheme_redirect) {
-        if (scheme_redirect.indexOf('http') === -1) {
-          // intent
-          setTimeout(function createIframe() {
-            var iframe = document.createElement('iframe');
-            iframe.style.border = 'none';
-            iframe.style.width = '1px';
-            iframe.style.height = '1px';
-            iframe.src = scheme_redirect;
-            document.body.appendChild(iframe);
-          }, 0);
-        } else {
-          window.parent.location = scheme_redirect;
-        }
+        console.log(scheme_redirect);
+        window.top.location = scheme_redirect;
       }
     </script>
   </head>
