@@ -22,7 +22,10 @@
 
       var scheme_redirect = decodeURIComponent(queryObject.scheme_redirect);
       if (scheme_redirect) {
-        window.top.location = scheme_redirect.slice(1, -1);
+        console.log('Redirecting to', scheme_redirect);
+        setTimeout(function delay() {
+          window.top.location = scheme_redirect.slice(1, -1);
+        }, 250);
       }
     </script>
   </head>
