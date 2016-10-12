@@ -22,7 +22,6 @@
 
       var scheme_redirect = decodeURIComponent(queryObject.scheme_redirect);
       if (scheme_redirect) {
-        console.log(scheme_redirect.slice(1, -1));
         window.top.location = scheme_redirect.slice(1, -1);
       }
     </script>
